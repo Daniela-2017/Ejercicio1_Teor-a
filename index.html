@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Proyecto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container col-md-6">
+        <form>
+        <div id=" contact-form" class="form-container" data-form-container>
+        <div class="row col-md-12">
+<a id="boton" href="#" onmouseover="javascript:mostrarAyuda()" onmouseout ="javascript:ocultarAyuda()">Ayuda</a>
+<div id="ayuda" class="container col-md-12">
+    <b>
+        Modelo utilizado:
+        <br />
+        Este es un simulador que representa la población del país por cada año restando las personas que mueren y emigran, a las que nacen y regresan al país, y haciendo la sumatoria respectiva de todos los años.
+    </b>
+</div>
+
+
+
+
+        </div>
+            <div class="form-title col-md-12">
+                <span><b>Representación del País</b></span>
+
+            </div>
+        <div class="input-container">
+            <label for=""><b>Años:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top">Años:</span>
+                    <input type="text" id="anio" name="anio" value=4>
+                </span>
+            </div>
+            <label for=""><b>Cantidad de habitantes:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" id="canHab" name="canHab" value=3000>
+                </span>
+            </div>
+            <label for=""><b>Tasa anual de natalidad:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" id="tasaNata" name="tasaNata" value=0.10>
+                </span>
+            </div>
+            <label for=""><b>Tasa anual de mortalidad:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" id="tasaMor" name="tasaMor" value=0.02>
+                </span>
+            </div>
+            <label for=""><b>Porcentaje que emigra del país:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" id="porEmi" name="porEmi" value=0.15>
+                </span>
+            </div>
+            <label for=""><b>Porcentaje que regresa al país:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" id="porRegre" name="porRegre" value=0.07>
+                </span>
+            </div>
+            <div class="row submit-row">
+                <center>
+                    <a type="button" value="Calcular" class="btn btn-block submit-form" onclick="calculo();">Calcular</a>
+                </center>
+            </div>
+            <label for=""><b>Calculo:</b></label>
+            <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"></span>
+                    <input type="text" readonly="readonly" placeholder="Calculo" id="calculo" name="calculo">
+                </span>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div class="container container-grafico col-md-6"><canvas id="myChart" width="250" height="150"></canvas></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+    <script src='main.js'></script>
+</body>
+</html>
